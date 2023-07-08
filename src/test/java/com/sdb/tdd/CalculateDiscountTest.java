@@ -15,7 +15,6 @@ public class CalculateDiscountTest {
 	
 	@Test
 	public void buyingOneBook() {
-		CalculateDiscount calculateDiscount = new CalculateDiscount();
 		String book = "Clean Code (Robert Martin, 2008)";
 		assertEquals(50.0, calculateDiscount.getTotalPrice());
 	}
