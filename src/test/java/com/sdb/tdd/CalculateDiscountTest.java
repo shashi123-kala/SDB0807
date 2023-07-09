@@ -9,6 +9,7 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.sdb.constants.SoftwareDevlopmentBooksConstants;
 import com.sdb.entity.SoftwareDevelopmentBook;
 import com.sdb.entity.SoftwareDevelopmentBookSetDiscount;
 
@@ -31,10 +32,10 @@ public class CalculateDiscountTest {
 	public void setup() {
 		List<SoftwareDevelopmentBookSetDiscount> byDifferentCopiesDiscountList = new ArrayList<>();
 
-		byDifferentCopiesDiscountList.add(new SoftwareDevelopmentBookSetDiscount(TWO_BOOKS, FIVE_PERCENT_DISCOUNT));
-		byDifferentCopiesDiscountList.add(new SoftwareDevelopmentBookSetDiscount(THREE_BOOKS, TEN_PERCENT_DISCOUNT));
-		byDifferentCopiesDiscountList.add(new SoftwareDevelopmentBookSetDiscount(FOUR_BOOKS, TWENTY_PERCENT_DISCOUNT));
-		byDifferentCopiesDiscountList.add(new SoftwareDevelopmentBookSetDiscount(FIVE_BOOKS, TWENTY_FIVE_PERCENT_DISCOUNT));	
+		byDifferentCopiesDiscountList.add(new SoftwareDevelopmentBookSetDiscount(TWO_BOOKS, SoftwareDevlopmentBooksConstants.FIVE_PERCENT_DISCOUNT));
+		byDifferentCopiesDiscountList.add(new SoftwareDevelopmentBookSetDiscount(THREE_BOOKS, SoftwareDevlopmentBooksConstants.TEN_PERCENT_DISCOUNT));
+		byDifferentCopiesDiscountList.add(new SoftwareDevelopmentBookSetDiscount(FOUR_BOOKS, SoftwareDevlopmentBooksConstants.TWENTY_PERCENT_DISCOUNT));
+		byDifferentCopiesDiscountList.add(new SoftwareDevelopmentBookSetDiscount(FIVE_BOOKS, SoftwareDevlopmentBooksConstants.FIVE_PERCENT_DISCOUNT));	
 		calculateDiscount = new CalculateDiscount(byDifferentCopiesDiscountList);
 		
 	}
