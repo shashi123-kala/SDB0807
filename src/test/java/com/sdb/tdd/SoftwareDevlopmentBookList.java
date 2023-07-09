@@ -17,4 +17,9 @@ public class SoftwareDevlopmentBookList {
 		SoftwareDevelopmentBook book = new SoftwareDevelopmentBook("Clean Architecture (Robert Martin, 2017)");
 		return book;
 	}
+	public static SoftwareDevelopmentBook GivenASoftwareDevelopmentIVBook() {
+		SoftwareDevelopmentBook book = new SoftwareDevelopmentBook(
+				"Test Driven Development by Example (Kent Beck, 2003)");
+		return book;
+	}
 }
