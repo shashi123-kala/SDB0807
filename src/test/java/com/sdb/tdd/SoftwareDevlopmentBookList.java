@@ -13,4 +13,8 @@ public class SoftwareDevlopmentBookList {
 		SoftwareDevelopmentBook book = new SoftwareDevelopmentBook("The Clean Coder (Robert Martin, 2011)");
 		return book;
 	}	
+	public static SoftwareDevelopmentBook GivenASoftwareDevelopmentIIIBook() {
+		SoftwareDevelopmentBook book = new SoftwareDevelopmentBook("Clean Architecture (Robert Martin, 2017)");
+		return book;
+	}
 }
