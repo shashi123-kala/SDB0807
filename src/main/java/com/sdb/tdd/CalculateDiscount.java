@@ -17,6 +17,7 @@ public class CalculateDiscount {
 		this.discounts = discounts;
 	}
 	private List<SoftwareDevlopmentBookSetQty> sdbQtySet = new ArrayList<>();
+	private double amtAfterDis;
 	public void Add(SoftwareDevelopmentBook book) {
 		SoftwareDevlopmentBookSetQty existedItem = null;
 		for (SoftwareDevlopmentBookSetQty item : sdbQtySet) {
@@ -37,7 +38,14 @@ public class CalculateDiscount {
 			System.out.println("one book" + amtAfterDis);
 			return amtAfterDis;
 		} else {
-			List<SoftwareDevelopmentBookSet> setsOfDifferentBooks = getBestCombinationBooksSets(sdbQtySet);
+			return getAmtAfterDiscount();			
+		}
+
+	}
+	
+	private double getAmtAfterDiscount() {
+		  double amtAfterDis = 0.00;
+		  List<SoftwareDevelopmentBookSet> setsOfDifferentBooks = getBestCombinationBooksSets(sdbQtySet);
 			double setPrice = 0.0;
 			for (SoftwareDevelopmentBookSet booksSet : setsOfDifferentBooks) {
 				for (SoftwareDevelopmentBook book : booksSet.getBooks()) {
@@ -47,10 +55,7 @@ public class CalculateDiscount {
 				amtAfterDis += setPrice;
 				setPrice = 0;
 			}
-			System.out.println("two book" + amtAfterDis);
-			return amtAfterDis;
-		}
-
+		  return amtAfterDis;
 	}
 	
 	private List<SoftwareDevelopmentBookSet> getBestCombinationBooksSets(
